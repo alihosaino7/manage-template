@@ -1,0 +1,30 @@
+
+@use '../helpers/variables' as *;
+
+.get-started-btn {
+   color: $white;
+   cursor: pointer;
+   width: fit-content;
+   background-color: $bright-red;
+   transition: .1s;
+   opacity: .9;
+   padding: 1.4rem 2.8rem;
+   border-radius: 30px;
+   box-shadow: 0 0.5rem 1rem rgba($bright-red, 0.5);
+   &:hover {
+      opacity: 1;
+   }
+   font: {
+      weight: 400;
+      size: 1.4rem;
+   }
+   &.light {
+      color: $bright-red;
+      background-color: $white;
+      box-shadow: 0 0.4rem 10rem rgba($dark-blue, 0.2);
+      font-weight: 500;
+   }
+   &.center {
+      margin: 0 auto;
+   }
+}

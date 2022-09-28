@@ -1,0 +1,29 @@
+
+@use '../helpers/mixins' as *;
+
+.container {
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+
+   @include max-sm {
+      padding-left: 2rem;
+      padding-right: 2rem;
+   }
+
+   @include min-sm {
+      width: 540px;
+   }
+
+   @include min-md {
+      width: 750px;
+   }
+
+   @include min-lg {
+      width: 970px;
+   }
+
+   @include min-xl {
+      width: 1170px;
+   }
+}

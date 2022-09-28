@@ -1,0 +1,63 @@
+
+// bootstrap breakpoints
+$breakpoints: (
+   "max-sm": 575px,
+   "max-md": 767px,
+   "max-lg": 991px,
+   "max-xl": 1199px,
+   "min-sm": 576px,
+   "min-md": 768px,
+   "min-lg": 992px,
+   "min-xl": 1200px,
+   );
+   
+
+@mixin max-xl {
+   @media (max-width: map-get($breakpoints, "max-xl")) {
+      @content;
+   }
+}
+
+@mixin max-lg {
+   @media (max-width: map-get($breakpoints, "max-lg")) {
+      @content;
+   }
+}
+
+@mixin max-md {
+   @media (max-width: map-get($breakpoints, "max-md")) {
+      @content;
+   }
+}
+
+@mixin max-sm {
+   @media (max-width: map-get($breakpoints, "max-sm")) {
+      @content;
+   }
+}
+
+// min width
+
+@mixin min-sm {
+   @media (min-width: map-get($breakpoints, "min-sm")) {
+      @content;
+   }
+}
+
+@mixin min-md {
+   @media (min-width: map-get($breakpoints, "min-md")) {
+      @content;
+   }
+}
+
+@mixin min-lg {
+   @media (min-width: map-get($breakpoints, "min-lg")) {
+      @content;
+   }
+}
+
+@mixin min-xl {
+   @media (min-width: map-get($breakpoints, "min-xl")) {
+      @content;
+   }
+}

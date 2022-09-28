@@ -1,0 +1,84 @@
+
+
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+
+/* Start Header */
+.nav {
+   padding-top: 6rem;
+   margin-bottom: $padding-section;
+   @include max-md {
+      padding: 3rem 0;
+      margin-bottom: 4rem;
+   }
+
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+         width: 13rem;
+      }
+
+      .icon-hamburger, .icon-close {
+         display: none;
+         cursor: pointer;
+         user-select: none;
+      }
+
+      .icon-hamburger {
+         @include max-lg {
+            display: block;
+         }
+      }
+      
+      .navbar {
+         @include max-lg {
+            display: none;
+            padding: 2.4rem;
+            width: 100%;
+            border-radius: 0.4rem;
+            background-color: $white;
+            text-align: center;
+            top: calc(100% + 2.6rem);
+            position: absolute;
+            box-shadow: 0 0 0.8rem 0 rgba($dark-blue, 0.2);
+            z-index: 1000;
+            left: 0;
+         }
+         @include max-sm {
+            left: 2rem;
+            width: calc(100% - 4rem);
+         }
+         &.show-navbar {
+            display: block;
+         }
+         li {
+            display: inline-block;
+            padding: 0 1.6rem;
+            color: rgba($dark-blue, .8);
+            cursor: pointer;
+            &:hover {
+               color: $dark-blue;
+            }
+            @include max-lg {
+               margin: 0 auto;
+               width: fit-content;
+               display: block;
+               font-weight: 500;
+               padding: 1.2rem;
+            }
+         }
+         
+      }
+
+      .get-started-btn {
+         @include max-lg {
+            display: none;
+         }
+      }
+
+   }
+}
+/* End Header */
